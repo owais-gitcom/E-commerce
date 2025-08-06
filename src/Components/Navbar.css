@@ -1,0 +1,1224 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05); 
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  padding: 15px 30px;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+/* On Scroll — glassy navbar */
+.navbar.scrolled {
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1); /* slight white tint */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black; /* You can change to black if needed */
+}
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.navbar .nav-links a,
+.navbar .icon-button {
+  color: inherit;
+}
+
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .icon-button {
+  color: black; /* You can change to black if needed */
+}
+
+
+/* Rest of your existing navbar CSS remains the same */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 60px;
+}
+
+
+
+/* Logo */
+
+
+
+.logo {
+  color: black;
+  font-size: 40px;
+  /* font-weight: bold; */
+  text-decoration: none !important; /* This removes the underline */
+  padding-right: 170px; /* Left padding for logo */
+  border-bottom: none !important; /* Ensures no border appears below */
+  list-style: none;
+  
+  font-family: linear;
+}
+
+.logo-text {
+  color: black;
+  font-size: 40px;
+  /* font-weight: bold; */
+  text-decoration: none; /* This removes the underline */
+  border: none; /* Ensure no underline from borders */
+  display: inline-block;
+  font-family: linear;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  font-family: linear;
+}
+
+
+@font-face {
+  font-family: linear;
+  src: url("../Fonts/Octin\ Prison\ Rg.otf");
+}
+
+
+
+
+
+/* Nav Links */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* margin: 0 auto;  */
+  color: black;
+  align-items: center;
+  justify-content: center; 
+  flex-grow: 1; 
+  font-family: linear;
+  font-size: 40px;
+  /* padding-top: 20px; */
+
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Modern active underline */
+.nav-links li a {
+
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 24px;
+
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  
+  
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d4a373;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: burlywood; /* Color change on hover */
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK UNDERLINE */
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* On scroll */
+.navbar.scrolled .nav-links li a {
+  color: black;
+}
+
+/* Responsive tweak */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  .icon-button {
+    margin: 0 6px;
+  }
+
+  .logo-text {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+@font-face {
+  font-family: linear;
+  src: url("../Fonts/Octin\ Prison\ Rg.otf");
+}
+
+
+.shopicon {
+  color: black;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.shopicon a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 10px;
+  padding-left: 20px;
+}
+
+
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: black;
+}
+
+/* Icons */
+.shopicon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    background-color: white;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shopicon {
+    padding-top: 15px;
+    align-self: flex-end;
+  }
+}
+
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  font-family: linear;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: black;
+  text-decoration: none;
+  font-family: linear;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5vw;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: linear;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.nav-links li a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d4a373;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: burlywood;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.shopicon {
+  color: black;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .logo {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    order: 1;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+  
+  .shopicon {
+    order: 2;
+    padding-left: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .navbar-container {
+    justify-content: space-between;
+  }
+  
+  .icon-button {
+    margin: 0 5px;
+  }
+}
+
+/* Hamburger menu for smallest screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  order: 2;
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+  
+  .shopicon {
+    margin-left: 15px;
+  }
+}
+
+
+
+
+
+/* Font Face */
+@font-face {
+  font-family: linear;
+  src: url("../Fonts/Octin Prison Rg.otf");
+}
+
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  color: black;
+  font-size: 40px;
+  text-decoration: none !important;
+  padding-right: 120px;
+  border-bottom: none !important;
+  list-style: none;
+  font-family: linear;
+}
+
+.logo-text {
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: linear;
+  display: inline-block;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: linear;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 24px; /* Adjusted from 28px to 24px */
+  font-weight: 500;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d4a373;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: burlywood;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Shop Icons */
+.shopicon {
+  color: black;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  order: 2;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .logo {
+    padding-right: 100px;
+  }
+  
+  .nav-links li a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    order: 1;
+    padding-right: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .shopicon {
+    order: 2;
+    padding-left: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links li a {
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    margin: 0 5px;
+    padding: 0 5px;
+  }
+}
+
+
+/* Font Face */
+@font-face {
+  font-family: linear;
+  src: url("../Fonts/Octin Prison Rg.otf");
+}
+
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  color: black;
+  font-size: 40px;
+  text-decoration: none !important;
+  padding-right: 120px;
+  border-bottom: none !important;
+  list-style: none;
+  font-family: linear;
+}
+
+.logo-text {
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: linear;
+  display: inline-block;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: linear;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 24px; /* Adjusted from 28px to 24px */
+  font-weight: 500;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d4a373;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: burlywood;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Shop Icons */
+.shopicon {
+  color: black;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  order: 2;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .logo {
+    padding-right: 100px;
+  }
+  
+  .nav-links li a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    order: 1;
+    padding-right: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .shopicon {
+    order: 2;
+    padding-left: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links li a {
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    margin: 0 5px;
+    padding: 0 5px;
+  }
+}
+
+
+
+
+/* Font Face */
+@font-face {
+  font-family: linear;
+  src: url("../Fonts/Octin Prison Rg.otf");
+}
+
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  color: black;
+  font-size: 40px;
+  text-decoration: none !important;
+  padding-right: 120px;
+  border-bottom: none !important;
+  list-style: none;
+  font-family: linear;
+}
+
+.logo-text {
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: linear;
+  display: inline-block;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: linear;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 24px; /* Adjusted from 28px to 24px */
+  font-weight: 500;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d4a373;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: burlywood;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Shop Icons */
+.shopicon {
+  color: black;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  order: 2;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .logo {
+    padding-right: 100px;
+  }
+  
+  .nav-links li a {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+  
+  .logo {
+    order: 1;
+    padding-right: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .shopicon {
+    order: 2;
+    padding-left: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  
+  .nav-links li a {
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    margin: 0 5px;
+    padding: 0 5px;
+  }
+}
+
+
+/* icon */
+
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+
+/* icon */
+
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+  min-width: 100px;
+}
+
+.dropdown-menu .username {
+  font-weight: bold;
+  color: #333;
+}
+
+.dropdown-menu button {
+  border: none;
+  background: none;
+  color: #d00;
+  cursor: pointer;
+  font-size: 14px;
+}
